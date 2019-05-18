@@ -77,5 +77,35 @@
         <b>Давайте дружить, это выгодно!</b>
         <p>Скидка 10% для друзей из социальных сетей.</p>
     </footer>
+
+    <section class="modal modal-feedback">
+        <h2>Напишите нам</h2>
+        <form action="" method="">
+            <div>
+                <label class="appointment-username">
+                    Ваше имя:
+                    <input type="text" name="username" placeholder="Имя Фамилия" required>                    
+                </label>                
+            </div>
+            <div>
+                <label class="appointment-mail">
+                    Ваш e-mail:
+                    <input type="text" name="text" placeholder="e-mail@example.com" required>                    
+                </label>                
+            </div>
+            <div>
+                <label class="appointment-comment">
+                    Текст письма:
+                    <textarea name="comment" placeholder="В свободной форме"  rows="10" cols="15" required></textarea>                    
+                </label>                
+            </div>
+            <button class="button" type="submit">
+                Отправить
+            </button>                       
+        </form>
+        <button class="modal-close" type="button">
+            Закрыть
+        </button>
+    </section>
   </body>
 </html>
