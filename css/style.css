@@ -1,30 +1,26 @@
 body {
     margin: 0px;
-
     font-family: "Roboto", Arial, sans-serif;
     font-size: 16px;
     line-height: 30px;
     color: #000000;
-
     background-color: #ffffff;
 }
 
 a {
-    text-decoration: none;/*убираем подчеркивание*/
+    text-decoration: none;
 }
 
 .main-navigation {
     font-size: 16px;
-    line-height: 30px;
-    
+    line-height: 30px;    
     color: #000000;
-
     background-color: #eeeeee;  
 }
 
 .site-navigation,
 .user-navigation {
-    list-style: none;/*убираем маркеры списка*/
+    list-style: none;
 }
 
 .site-navigation a,
@@ -32,21 +28,20 @@ a {
     color: #000000;
 }
 
-.site-navigation a:hover,/*наведение на ссылку*/
-.site-navigation a:focus,/*фокусирование на ссылку*/
+.site-navigation a:hover,
+.site-navigation a:focus,
 .user-navigation a:hover,
 .user-navigation a:focus {
   color: #fb565a;
 }
 
-.site-navigation a:active,/*нажатие на ссылку*/
+.site-navigation a:active,
 .user-navigation a:active {
   color: rgba(0, 0, 0, 0.3);
 }
 
 .site-navigation-current {
-    text-decoration: underline;
-    
+    text-decoration: underline;    
 }
 
 .service-list {
@@ -62,40 +57,24 @@ a {
     color: #283136;
 }
 
-.button-red {
+.button {
     padding: 19px 39px 18px;
-
     line-height: 18px;
     color: #ffffff;
     width: 160px;
     height: 50px;
     border: none;
     border-radius: 3px;
-    
+}
+.button-red {   
     background-color: #fb565a;
 }
 
-.button-green {
-    padding: 19px 39px 18px;
-
-    line-height: 18px;
-    color: #ffffff;
-    width: 160px;
-    height: 50px;
-    border-radius: 3px;
-
+.button-green {   
     background-color: #00ca74;
 }
 
 .button-yellow {
-    padding: 19px 39px 18px;
-
-    line-height: 18px;
-    color: #ffffff;
-    width: 160px;
-    height: 50px;
-    border-radius: 3px;
-    
     background-color: #efc84a;
 }
 
@@ -114,7 +93,7 @@ a {
 }
 
 .footer-social {
-    list-style: none;/*убираем маркеры списка*/
+    list-style: none;
 }
 
 .footer-social a {
@@ -130,7 +109,6 @@ a {
     background-color: #d7373b;
 }
 
-
 .modal {    
     color: #000000;
     background-color: #ffffff;   
@@ -141,25 +119,22 @@ a {
     line-height: 45px;
 }
 
-input {
+.appointment-item-input {
     width: 360px;
-    height: 50px;
-    border: solid 2px #d7dcde;
+    height: 50px;    
     background-color: #ffffff;
 }
 
-textarea {
+.appointment-item-comment {
     width: 760px;
-    height: 118px;
-    border: solid 2px #d7dcde;
+    height: 118px;    
     background-color: #ffffff;
 }
-button.button-send {
-    color: #ffffff;
-}
+
 .button-send {
     width: 260px;
     height: 50px;
+    color: #ffffff;
     background-color: #fb565a;
     border: none;
     border-radius: 3px;
@@ -174,49 +149,47 @@ button.button-send {
 }
 
 .filter fieldset {
-    border: none;/* убираем обводку у тега fieldset*/    
+    border: none;  
 }
 
 .filter legend {
-    font-size: 18px;/*зададим размер шрифта для legend*/
-    line-height: 30px;/*зададим высоту строки для legend*/
+    font-size: 18px;
+    line-height: 30px;
 }
 
 .filter ul {
-    list-style: none;/*сбросим дефолтный стиль списка для фильтров*/
-    line-height: 20px;/*зададим высоту строки*/
+    list-style: none;
+    line-height: 20px;
 }
 
 .filter-input:hover + label,
 .filter-input:focus + label {
-  color: #283136;/*Добавим цвет шрифта для подписи при наведении и фокусе на поле*/ 
+  color: #283136;
 }
 
 .filter-input:disabled + label {
-  color: rgba(40, 49, 54, 0.3);/*назначим стиль для заблокированного поля*/
+  color: rgba(40, 49, 54, 0.3);
 }
 
-button.filter-button {
+.filter-button {
     padding: 19px 88px 18px 89px;
-
     width: 260px;
     height: 50px;
-    line-height: 18px;
-    
+    line-height: 18px;    
     background-color: #eeeeee;
 }
 
-button.filter-button:hover,
-button.filter-button:focus {
+.filter-button:hover,
+.filter-button:focus {
     background-color: #dfdfdf;
 }
 
-button.filter-button:active {
+.filter-button:active {
     background-color: rgba(0, 1, 1, 0.1);
 }
 
 .catalog-list {
-    list-style: none;/*отменяем стили списка по умолчанию*/
+    list-style: none;
 }
 
 .catalog-item a {
@@ -256,21 +229,16 @@ a.button:active {
 
 .button {
     padding: 19px 60px 18px 62px;
-    text-align: center;
-    
+    text-align: center;    
     line-height: 18px;
     border-radius: 3px;
-
     background-color: #fb565a;
 }
 
-.inner-page {
+.project {
     width: 360px;
     height: 231px;
     text-align: center;
     background-color: #eeeeee;
 }
 
-.filter-option {
-    
-}
