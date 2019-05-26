@@ -7,37 +7,41 @@
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
   </head>
-  <body>
+  <body class="inner-page">
     <header class="main-header">
         <nav class="main-navigation">
-            <a class="main-header-logo">
-                <img src="img/nerds-logo.svg" width="160" height="65" alt="Нёрдс">
-            </a>
-            <ul class="site-navigation">
-                <li>
-                    <a href="studio.html">Студия</a>
-                </li>
-                <li>
-                    <a href="clients.html">Клиенты</a>
-                </li>
-                <li class="site-navigation-current">
-                    <a href="catalog.html">Магазин</a>
-                </li>
-                <li>
-                    <a href="contacts.html">Контакты</a>
-                </li>
-            </ul>
-            <ul class="user-navigation">
-                <li>
-                    <a href="#">Корзина
-                        <img src="img/basket-icon.svg" width="15" height="15" alt="Корзина">
+            <div class="main-navigation-wrapper">
+                <div class="container"> 
+                    <a class="main-header-logo">
+                        <img src="img/nerds-logo.svg" width="160" height="65" alt="Нёрдс">
                     </a>
-                </li>
-            </ul>
+                    <ul class="site-navigation">
+                        <li>
+                            <a href="studio.html">Студия</a>
+                        </li>
+                        <li>
+                            <a href="clients.html">Клиенты</a>
+                        </li>
+                        <li class="site-navigation-current">
+                            <a href="catalog.html">Магазин</a>
+                        </li>
+                        <li>
+                            <a href="contacts.html">Контакты</a>
+                        </li>
+                    </ul>
+                    <ul class="user-navigation">
+                        <li>
+                            <img src="img/basket-icon.svg" width="15" height="15" alt="Корзина">
+                            <a href="#">Корзина</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </nav>
     </header>
-    <main class="container">
-        <h1 class="page-title">Магазин готовых шаблонов</h1>
+    <main class="container-main">
+        <h1 class="page-title main-header">Магазин готовых шаблонов</h1>
+        <div class="catalog-columns">
         <section class=filters>
             <h2 class=visually-hidden>Фильтр товаров</h2>
             <!-- Здесь будет форма -->
@@ -182,28 +186,41 @@
                     </div>
                 </li>                           
             </ul>
-        </section>
+            
+            <ul class="pagination-list">
+                <li class="pagination-item  pagination-item-current"><a>1</a></li>
+                <li class="pagination-item"><a href="#">2</a></li>
+                <li class="pagination-item"><a href="#">3</a></li>
+                <li class="pagination-item"><a href="#">Следующая</a></li>
+            </ul>
+            
+        </div>
+    </sectuon>
     </main>
     <footer class="main-footer">
-        <ul class="footer-social">
-            <li>
-                <a class="social-button" href="#">Вконтакте
-                    <img src="img/vk-icon.svg" width="26" height="15" alt="Вконтакте">
-                </a>
-            </li>
-            <li>
-                <a class="social-button" href="#">Фейсбук
-                    <img src="img/fb-icon.svg" width="12" height="22" alt="Фейсбук">
-                </a>
-            </li>
-            <li>
-                <a class="social-button" href="#">Инстаграм
-                    <img src="img/insta-icon.svg" width="21" height="21" alt="Инстаграм">
-                </a>
-            </li>
-        </ul>
-        <b>Давайте дружить, это выгодно!</b>
-        <p>Скидка 10% для друзей из социальных сетей.</p>
+        <div class="container">
+            <ul class="footer-social">
+                <li>
+                    <a class="social-button" href="#">Вконтакте
+                        <img src="img/vk-icon.svg" width="26" height="15" alt="Вконтакте">
+                    </a>
+                </li>
+                <li>
+                    <a class="social-button" href="#">Фейсбук
+                        <img src="img/fb-icon.svg" width="12" height="22" alt="Фейсбук">
+                    </a>
+                </li>
+                <li>
+                    <a class="social-button" href="#">Инстаграм
+                        <img src="img/insta-icon.svg" width="21" height="21" alt="Инстаграм">
+                    </a>
+                </li>
+            </ul>
+            <div>
+                <b>Давайте дружить, это выгодно!</b>
+                <p>Скидка 10% для друзей из социальных сетей.</p>
+            </div>
+        </div>
     </footer>
 
     <section class="modal">
