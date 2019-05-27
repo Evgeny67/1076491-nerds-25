@@ -21,7 +21,7 @@ a {
 }
 
 .main-header {
-    width: 100pc;
+    width: 100%;
     margin: 0;
     padding: 0;
     background-color: #eeeeee;
@@ -128,43 +128,43 @@ a {
     border: none;
     border-radius: 3px;
 }
-ul .button-red {   
+.button.button-red {   
     background-color: #fb565a;
 }
 
-ul .button-green {   
+.button.button-green {   
     background-color: #00ca74;
 }
 
-ul .button-yellow {
+.button.button-yellow {
     background-color: #efc84a;
 }
-ul a.button-red:hover,
-ul a.button-red:focus {
+.button.button-red:hover,
+.button.button-red:focus {
     color: #ffffff;
     background-color: #e74246;
 }
-ul a.button-red:active {
+.button.button-red:active {
     color: rgba(255, 255, 255, 0.3);
     background-color: #d7373b;
 }
 
-ul a.button-green:hover,
-ul a.button-green:focus {
+.button.button-green:hover,
+.button.button-green:focus {
     color: #ffffff;
     background-color: #00bc6c;
 }
-ul a.button-green:active {
+.button.button-green:active {
     color: rgba(255, 255, 255, 0.3);
     background-color: #00aa62;
 }
 
-ul a.button-yellow:hover,
-ul a.button-yellow:focus {
+.button.button-yellow:hover,
+.button.button-yellow:focus {
     color: #ffffff;
     background-color: #eab534;
 }
-ul a.button-yellow:active {
+.button.button-yellow:active {
     color: rgba(255, 255, 255, 0.3);
     background-color: #e5a722;
 }
@@ -208,7 +208,11 @@ ul a.button-yellow:active {
 }
 
 .footer-social a {
-    background-color: #e1e1e1; 
+    width: 79px;
+    height: 79px;
+    background-color: #e1e1e1;
+    text-align: center;
+    padding: 32px 32px;
 }
 
 .footer-social a:hover,
@@ -382,20 +386,25 @@ a.button:active {
     background-color: #eeeeee;
 }
 
-.pagination-list {
+.pagination .pagination-list {
+    display: flex;
+    list-style: none;
     padding: 0;
     margin: 0;
-    list-style: none;
     margin-bottom: 60px;
 }
 
-.pagination-list li {
-    display: inline;
+.pagination-item {
+    color: #000000;
+    line-height: 18px;
+    
+    text-align: center;    
+    background-color: #eeeeee;   
+    margin-right: 11px;
 }
 
 .pagination-item a {
     color: #000000;  
-    background-color: #eeeeee;
 }
 
 .pagination-item a:hover,
