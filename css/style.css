@@ -7,13 +7,26 @@ body {
     background-color: #ffffff;
 }
 
-.page-title {
-    margin-top: 100px;
-    margin-bottom: 116px;
+.container {
+    max-width: 1440px;
     padding: 0;
-    text-align: center;
-    font-size: 55px;
-    line-height: 55px;
+    margin: 0 auto;
+}
+
+.visually-hidden:not(:focus):not(:active) {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 a {
@@ -25,13 +38,16 @@ a {
     margin: 0;
     padding: 0;
     background-color: #eeeeee;
+    /*margin-bottom: 80px;*/
 }
 
+.main-header h1 {
+    padding: 0;
+    margin: 0;
+    background-color: #eeeeee; 
+}
 .main-navigation {
     display: flex;
-    /*flex-direction: column;*/
-    /*align-items: center;*/
-    
     font-size: 16px;
     line-height: 30px;    
     color: #000000;
@@ -39,29 +55,29 @@ a {
 }
 
 .main-header-logo {
+    padding: 0;
     margin: 0;
-    padding: 0px;
+    margin-left: 140px;
+    margin-right: 202px;  
     margin-top: 49px;
 }
 
 .main-navigation-wrapper {
-    /*width: 100%;*/
-    margin-bottom: 60px;
-    /*background-color: #eeeeee;*/
-}
-
-.main-navigation-wrapper li {
-    display: inline;
-    margin-right: 48px;
+    padding-bottom: 0px;
 }
 
 .main-navigation-wrapper .container {
     display: flex;
-    justify-content: space-around;
+}
+
+.main-navigation-wrapper li {
+    margin-right: 48px;
 }
 
 .site-navigation,
 .user-navigation {
+    display: flex;
+    
     list-style: none;
     margin: 0;
     padding: 0;
@@ -89,23 +105,37 @@ a {
     text-decoration: underline;    
 }
 
-.container {
-    width: 1440px;
+.user-navigation {
+    margin-left: 245px;
 }
 
-.service {
-    width: 1440px;
+.user-navigation a {
+    padding-left: 26px; 
 }
+
+
+
+
+
+
+
+
+
+
+
+
 .service-list {
     display: flex;
-    justify-content: space-between;
     margin: 0;
     padding: 0;
+    margin-top: 80px;
     margin-bottom: 60px;
     margin-left: 140px;
-    
-
     list-style: none;
+}
+
+.service-list li {
+    margin-right: 100px;
 }
 
 .service-list h3 {
@@ -141,7 +171,6 @@ a {
 }
 .button.button-red:hover,
 .button.button-red:focus {
-    color: #ffffff;
     background-color: #e74246;
 }
 .button.button-red:active {
@@ -151,7 +180,6 @@ a {
 
 .button.button-green:hover,
 .button.button-green:focus {
-    color: #ffffff;
     background-color: #00bc6c;
 }
 .button.button-green:active {
@@ -161,7 +189,6 @@ a {
 
 .button.button-yellow:hover,
 .button.button-yellow:focus {
-    color: #ffffff;
     background-color: #eab534;
 }
 .button.button-yellow:active {
@@ -175,44 +202,50 @@ a {
 }
 
 .main-footer .container {
-    display: flex;   
+    display: flex;
+    padding: 0;
+    margin: 0;
 }
 
 .main-footer b {
+    display: flex;
     font-size: 36px;
     line-height: 36px;
-    margin-bottom: 104px;
     padding: 0;
     margin: 0;
-    margin-left: 160px;
+    margin-left: 139px;
+    margin-bottom: 12px;
 }
 
-.main-footer p {    
+.main-footer p {
+    display: flex; 
     line-height: 22px;
     color: #444444;
-    margin-bottom: 76px;
     padding: 0;
     margin: 0;
-    margin-left: 160px;
+    margin-left: 141px;
 }
 
 .footer-social {
-    list-style: none;
+    display: flex;
+    text-align: ;
     padding: 0;
+    margin: 0;
     margin-left: 140px;
-}
-
-.footer-social li {
-    display: inline;
-    margin-right: 12px;
+    list-style: none;
 }
 
 .footer-social a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    background-color: #e1e1e1;
     width: 79px;
     height: 79px;
-    background-color: #e1e1e1;
-    text-align: center;
-    padding: 32px 32px;
+    border-radius: 50%;
+    margin-right: 12px;
 }
 
 .footer-social a:hover,
@@ -222,6 +255,10 @@ a {
 
 .footer-social a:active {
     background-color: #d7373b;
+}
+
+.footer-social a:active path {
+    fill: rgba(0, 1, 1, 0.1);
 }
 
 .modal {    
@@ -256,10 +293,13 @@ a {
 }
 
 .page-title {
+    padding: 0;
+    margin: 0;
     font-size: 55px;
     line-height: 55px;
     text-align: center;
     margin-bottom: 60px;
+    padding-top: 80px; 
     padding-bottom: 116px;
     background-color: #eeeeee;
 }
@@ -386,7 +426,7 @@ a.button:active {
     background-color: #eeeeee;
 }
 
-.pagination .pagination-list {
+.pagination-list {
     display: flex;
     list-style: none;
     padding: 0;
