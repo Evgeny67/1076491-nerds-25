@@ -8,8 +8,8 @@ body {
 }
 
 .container {
-    max-width: 1440px;
-    padding: 0;
+    max-width: 1160px;
+    padding: 0 20px;
     margin: 0 auto;
 }
 
@@ -110,20 +110,15 @@ a {
 }
 
 .user-navigation a {
+    background-image: url("/img/basket-icon.svg");
+    background-repeat: no-repeat;
     padding-left: 26px; 
 }
-
-
-
-
-
-
-
-
-
-
-
-
+/*
+.user-navigation a::before {
+    
+}
+*/
 .service-list {
     display: flex;
     margin: 0;
@@ -469,3 +464,20 @@ a.button:active {
   background-color: #ffffff;
 }
 
+.social-vk {
+    background-image: url("/img/vk-icon.svg");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+
+.social-fb {
+    background-image: url("/img/fb-icon.svg");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+
+.social-insta {
+    background-image: url("/img/insta-icon.svg");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
