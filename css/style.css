@@ -8,7 +8,7 @@ body {
 }
 
 .container {
-    max-width: 1160px;
+    max-width: 1200px;
     padding: 0 20px;
     margin: 0 auto;
 }
@@ -33,59 +33,80 @@ a {
     text-decoration: none;
 }
 
-.main-header {
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    background-color: #eeeeee;
-    /*margin-bottom: 80px;*/
+img {
+    max-width: 100%;
+    height: auto;
 }
 
+/*
+.main-header {
+  margin-bottom: ;
+}
+*/
 .main-header h1 {
     padding: 0;
     margin: 0;
     background-color: #eeeeee; 
 }
+
 .main-navigation {
     display: flex;
+    flex-direction: column;
+    align-items: center;
     font-size: 16px;
     line-height: 30px;    
     color: #000000;
-    background-color: #eeeeee;  
+    background-color: #eeeeee;
 }
 
 .main-header-logo {
     padding: 0;
     margin: 0;
-    margin-left: 140px;
-    margin-right: 202px;  
+    /*margin-left: 140px;
+    /*margin-right: 202px;*/  
     margin-top: 49px;
 }
 
 .main-navigation-wrapper {
+    width: 100%;
+    background-color: #eeeeee;
     padding-bottom: 0px;
 }
 
 .main-navigation-wrapper .container {
     display: flex;
+    justify-content: space-between;
 }
 
 .main-navigation-wrapper li {
     margin-right: 48px;
 }
 
-.site-navigation,
+.site-navigation {
+    display: flex;
+    /*flex-wrap: wrap;*/
+    width: 440px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    margin-top: 83px;
+}
+
 .user-navigation {
     display: flex;
     
-    list-style: none;
+    max-width: 115px;
     margin: 0;
     padding: 0;
+    list-style: none;
     margin-top: 83px;
 }
 
 .site-navigation a,
 .user-navigation a {
+    /*display: block;
+    padding: 25px 20px;
+    vertical-align: middle;*/
     color: #000000;
 }
 
@@ -106,7 +127,7 @@ a {
 }
 
 .user-navigation {
-    margin-left: 245px;
+    margin-left: 0;
 }
 
 .user-navigation a {
@@ -125,7 +146,7 @@ a {
     padding: 0;
     margin-top: 80px;
     margin-bottom: 60px;
-    margin-left: 140px;
+    /*margin-left: 140px;*/
     list-style: none;
 }
 
@@ -193,13 +214,11 @@ a {
 
 .main-footer {
     margin: 0;
-    padding: 69px 0;
+    padding: 0;
 }
 
 .main-footer .container {
     display: flex;
-    padding: 0;
-    margin: 0;
 }
 
 .main-footer b {
@@ -223,10 +242,10 @@ a {
 
 .footer-social {
     display: flex;
-    text-align: ;
+    
     padding: 0;
     margin: 0;
-    margin-left: 140px;
+    /*margin-left: 140px;*/
     list-style: none;
 }
 
@@ -480,4 +499,104 @@ a.button:active {
     background-image: url("/img/insta-icon.svg");
     background-repeat: no-repeat;
     background-position: 50% 50%;
+}
+
+.modal {    
+    width: 960px;
+    height: 590px;
+    padding: 0;
+    margin: 0;
+    box-shadow: 0 20px 40px 0 rgba(0, 1, 1, 0.75);
+    margin: 0 auto;
+    margin-bottom: 100px;
+}
+
+.modal h2 {
+    padding: 0;
+    margin: 0;
+    font-size: 45px;
+    line-height: 45px;
+    text-align: left;
+    margin-left: 100px;
+    padding-top: 73px;
+    margin-bottom: 49px;
+}
+
+.appointment {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+}
+
+.input {
+    display: block;
+    padding: 0;
+    margin: 0;
+    width: 360px;
+    height: 50px;
+    font-size: 16px;
+    line-height: 18px;
+    opacity: 0.5;
+    color: rgba(68, 68, 68, 0.5);
+    border: solid 2px #d7dcde;
+    border-radius: 4px;
+    margin-bottom: 36px;
+}
+
+.input:hover {
+    border: solid 2px #b4b9bb;
+}
+
+.input:focus {
+    border: solid 2px #000000;
+}
+
+.item-input {
+    padding: 0;
+    margin: 0;
+    line-height: 18px;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.comment {
+    padding: 0;
+    margin: 0;
+    width: 760px;
+    height: 118px;
+    font-size: 16px;
+    line-height: 18px;
+    opacity: 0.5;
+    color: rgba(68, 68, 68, 0.5);
+    border: solid 2px #d7dcde;
+    border-radius: 4px;
+    margin-left: 100px;
+    margin-bottom: 47px;
+}
+.item-comment {
+    padding: 0;
+    margin: 0;
+    line-height: 18px;
+    font-weight: bold;
+    text-align: left;
+    margin-left: 100px;
+}
+
+.username {
+    padding: 0;
+    margin: 0;;    
+    text-align: left;
+    margin-left: 100px;
+    margin-right: 40px;
+}
+
+.email {
+    padding: 0;
+    margin: 0;;    
+}
+
+.button-send {
+    padding: 0;
+    margin: 0;
+    margin-left: 100px;
 }
