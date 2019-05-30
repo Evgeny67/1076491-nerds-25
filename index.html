@@ -11,7 +11,7 @@
     <header class="main-header">
         <nav class="main-navigation">
             <div class="main-navigation-wrapper">
-                <div class="container">       
+                <div class="container">        
                     <a class="main-header-logo" href="index.html">
                         <img src="img/nerds-logo.svg" width="160" height="65" alt="Нёрдс">
                     </a>
@@ -43,7 +43,7 @@
             </div>            
         </nav>
     </header>
-    <main>
+    <main class="container">
         <section class="service">
             <h2 class="visually-hidden">Услуги</h2>
             <ul class="service-list">
@@ -103,22 +103,22 @@
     <section class="modal">
         <h2>Напишите нам</h2>
         <form action="https://echo.htmlacademy.ru" method="post">
-            <div>
-                <label class="appointment-item-input">
+            <div class="appointment username">
+                <label class="item-input">
                     Ваше имя:
-                    <input type="text" name="username" placeholder="Имя Фамилия" required>                    
+                    <input class="input" type="text" name="username" placeholder="Имя Фамилия" required>                    
                 </label>                
             </div>
-            <div>
-                <label class="appointment-item-input">
+            <div class="appointment email">
+                <label class="item-input">
                     Ваш e-mail:
-                    <input type="email" name="email" placeholder="e-mail@example.com" required>                    
+                    <input class="input" type="email" name="email" placeholder="e-mail@example.com" required>                    
                 </label>                
             </div>
-            <div>
-                <label class="appointment-item-comment">
+            <div class="">
+                <label class="item-comment">
                     Текст письма:
-                    <textarea name="comment" placeholder="В свободной форме"  rows="10" cols="15" required></textarea>                    
+                    <textarea class="comment" name="comment" placeholder="В свободной форме"  rows="10" cols="15" required></textarea>                    
                 </label>                
             </div>
             <button class="button-send" type="submit">
