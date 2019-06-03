@@ -48,6 +48,25 @@
         <div class="catalog-columns container">
             <section class=filters>
                 <h2 class=visually-hidden>Фильтр товаров</h2>
+                <!-- Фильтр прайса -->
+                <form method="get" action="https://echo.htmlacademy.ru">
+                    <fieldset class="filter-item">
+                      <legend>Стоимость:</legend>
+                      <div class="range-filter">
+                        <div class="range-controls">
+                          <div class="scale">
+                            <div class="bar" style="margin-left: 20%; width: 30%"></div>
+                          </div>
+                          <div class="toggle toggle-min"></div>
+                          <div class="toggle toggle-max"></div>
+                        </div>
+                        <div class="price-controls">
+                          <label class="min-price">от <input name="min-price" type="text" value="0"></label>
+                          <label class="max-price">до <input name="max-price" type="text" value="15000"></label>
+                        </div>
+                      </div>
+                    </fieldset>
+                  </form>              
                 <!-- Здесь будет форма -->
                 <form class="filter" action="https://echo.htmlacademy.ru" method="get">
                     <fieldset>
@@ -124,7 +143,7 @@
                             <h3>
                                 <a href="#">Sedona</a>
                             </h3>
-                            <p>Информационный сайт для туристов</p>
+                            <p>Информационный сайт<br> для туристов</p>
                             <a class="button" href="#">9 900 Руб.</a>
                         </div>
                     </li>
@@ -137,7 +156,7 @@
                             <h3>
                                 <a href="#">Pink App</a>
                             </h3>
-                            <p>Продуктовый лендинг приложения для iOS и Android</p>
+                            <p>Продуктовый лендинг<br> приложения для iOS и Android</p>
                             <a class="button" href="#">9 900 Руб.</a>
                         </div>
                     </li>
@@ -149,7 +168,7 @@
                             <h3>
                                 <a href="">Barbershop</a>
                             </h3>
-                            <p>Сайт салон красоты. Для мужчин, да.</p>
+                            <p>Сайт салон красоты.<br> Для мужчин, да.</p>
                             <a class="button" href="#">9 900 Руб.</a>
                         </div>
                     </li>
@@ -161,7 +180,7 @@
                             <h3>
                                 <a href="">Mishka</a>
                             </h3>
-                            <p>Интернет-магазин вязаных игрушек.</p>
+                            <p>Интернет-магазин<br> вязаных игрушек.</p>
                             <a class="button" href="#">9 900 Руб.</a>
                         </div>
                     </li>
@@ -173,7 +192,7 @@
                             <h3>
                                 <a href="">A Plus</a>
                             </h3>
-                            <p>Лендинг курсов повышения квалификации.</p>
+                            <p>Лендинг курсов повышения<br> квалификации.</p>
                             <a class="button" href="#">9 900 Руб.</a>
                         </div>
                     </li>
@@ -185,7 +204,7 @@
                             <h3>
                                 <a href="">Кваст</a>
                             </h3>
-                            <p>Промо-сайт производителя крафтового кваса.</p>
+                            <p>Промо-сайт производителя<br> крафтового кваса.</p>
                             <a class="button" href="#">9 900 Руб.</a>
                         </div>
                     </li>                           
@@ -200,7 +219,7 @@
                     <li class="pagination-item">
                         <a href="#">3</a>
                     </li>
-                    <li class="pagination-item">
+                    <li class="pagination-item next">
                         <a href="#">Следующая</a>
                     </li>
                 </ul>                
@@ -265,7 +284,7 @@
             </button>
         </form>
         <button class="modal-close" type="button">
-            Закрыть
+            <span class="visually-hidden">Закрыть</span>
         </button>
     </section>
   </body>
