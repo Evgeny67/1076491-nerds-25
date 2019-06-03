@@ -1,19 +1,21 @@
 body {
     margin: 0px;
+    padding: 0;
+    min-width: 1200px;
     font-family: "Roboto", Arial, sans-serif;
     font-size: 16px;
-    line-height: 30px;
+    
     color: #000000;
-    background-color: #ffffff;
 }
 
 .container {
     max-width: 1200px;
     padding: 0 20px;
     margin: 0 auto;
+    box-sizing: border-box;
 }
 
-.visually-hidden:not(:focus):not(:active) {
+.visually-hidden/*:not(:focus):not(:active)*/ {
   position: absolute;
 
   width: 1px;
@@ -38,11 +40,149 @@ img {
     height: auto;
 }
 
-/*
 .main-header {
-  margin-bottom: ;
+    background-color: #eeeeee;
 }
-*/
+
+.slider {
+    position: relative;
+    
+    background-color: #eeeeee;
+}
+
+.slider-controls {
+    position: absolute;
+    left: 50%;
+    bottom: 104px;
+    z-index: 100;
+    
+    width: 160px;
+    height: 18px;
+  
+    text-align: center;
+    font-size: 0;
+    transform: translateX(-50%);
+}
+.slider-controls label {
+    position: relative;
+    
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    padding: 8px;
+    
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.slider-controls label::after {
+    content: "";
+    
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    z-index: 1;
+    
+    width: 18px;
+    height: 18px;
+    
+    background: #ffffff;
+    
+    border-radius: 50%;
+}
+
+.slider-list {
+    margin: 0;
+    padding: 0;
+    
+    list-style: none;
+}
+
+.slider-item {
+    display: none;
+    padding: 78px 0 80px 0;
+}
+
+.slider-item:nth-child(1) {
+    background-image: url("C:/Users/я-пк/Desktop/Nerds/img/slide1.png");
+    background-repeat: no-repeat;
+    background-position: 93% 18px;
+}
+
+.slider-item:nth-child(2) {
+    background-image: url("C:/Users/я-пк/Desktop/Nerds/img/slide2.png");
+    background-repeat: no-repeat;
+    background-position: 100% 0;
+}
+
+.slider-item:nth-child(3) {
+    background-image: url("C:/Users/я-пк/Desktop/Nerds/img/slide3.png");
+    background-repeat: no-repeat;
+    background-position: 100% 20px;
+}
+
+#product-1:checked ~ .slider-list .slider-item:nth-child(1) {
+    display: block;
+}
+  
+#product-2:checked ~ .slider-list .slider-item:nth-child(2) {
+    display: block;
+}
+  
+#product-3:checked ~ .slider-list .slider-item:nth-child(3) {
+    display: block;
+}
+  
+#product-1:checked ~ .slider-controls .slider-controls-item--1::before,
+#product-2:checked ~ .slider-controls .slider-controls-item--2::before,
+#product-3:checked ~ .slider-controls .slider-controls-item--3::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 2;
+    width: 4px;
+    height: 4px;
+    margin: -4px;
+    background-color: inherit;
+    border: 2px solid #c1c1c1;
+    border-radius: 50%;
+}
+
+.slider-item h3 {
+    max-width: 600px;
+    margin: 0;
+    margin-bottom: 27px;
+    
+    font-size: 55px;
+    line-height: 55px;
+    font-weight: 500;
+}
+
+.slider-item p {
+    max-width: 430px;
+    margin: 0;
+    margin-bottom: 38px;
+}
+
+.slider-item-button {
+    /*display: block;*/
+    width: 240px;
+    padding: 13px 0;
+    
+    background-color: #fb565a;
+}
+
+.button.slider-item-button:hover,
+.button.slider-item-button:focus {
+  background-color: #e74246;
+}
+
+.button.slider-item-button:active {
+    background-color: #d7373b;
+    color: rgba(255, 255, 255, 0.3);
+}
+
 .main-header h1 {
     padding: 0;
     margin: 0;
@@ -54,7 +194,7 @@ img {
     flex-direction: column;
     align-items: center;
     font-size: 16px;
-    line-height: 30px;    
+       
     color: #000000;
     background-color: #eeeeee;
 }
@@ -62,9 +202,17 @@ img {
 .main-header-logo {
     padding: 0;
     margin: 0;
-    /*margin-left: 140px;
-    /*margin-right: 202px;*/  
+     
     margin-top: 49px;
+}
+
+.main-header-logo:hover,
+.main-header-logo:focus {
+    opacity: 0.8;
+}
+
+.main-header-logo:active {
+    opacity: 0.3;
 }
 
 .main-navigation-wrapper {
@@ -135,11 +283,11 @@ img {
     background-repeat: no-repeat;
     padding-left: 26px; 
 }
-/*
-.user-navigation a::before {
-    
+
+.user-navigation:hover a {
+    color: red;
 }
-*/
+
 .service-list {
     display: flex;
     margin: 0;
@@ -166,11 +314,13 @@ img {
 }
 
 .button {
-    padding: 19px 39px 18px;
+    /*padding: 19px 39px 18px;*/
     line-height: 18px;
     color: #ffffff;
     width: 160px;
-    height: 50px;
+    /*height: 50px;*/
+    text-transform: uppercase;
+    text-align: center;
     border: none;
     border-radius: 3px;
 }
@@ -354,7 +504,8 @@ img {
     padding: 19px 88px 18px 89px;
     width: 260px;
     height: 50px;
-    line-height: 18px;    
+    line-height: 18px;
+    text-transform: uppercase; 
     background-color: #eeeeee;
 }
 
@@ -403,13 +554,14 @@ img {
 }
 .catalog-item h3 {
     font-size: 18px;
-    line-height: 30px;
+    padding-top: 35px;
+    margin-bottom: 25px;
 }
 
-.catalog-item p {
+.catalog-item p {    
     
-    line-height: 18px;
     color: #666666;
+    margin-bottom: 30px;
 }
 
 a.button {
@@ -442,6 +594,7 @@ a.button:active {
 
 .pagination-list {
     display: flex;
+    flex-wrap: wrap;
     list-style: none;
     padding: 0;
     margin: 0;
@@ -452,26 +605,41 @@ a.button:active {
     color: #000000;
     line-height: 18px;
     
-    text-align: center;    
+    border-radius: 3px;
+    /*text-align: center;*/
     background-color: #eeeeee;   
     margin-right: 11px;
 }
 
+.pagination-item:last-child {
+    margin-right: 0;
+}
+
 .pagination-item a {
+    display: block;
+    padding: 19px 21px;
     color: #000000;  
+}
+
+.pagination-item.next a {
+    text-transform: uppercase;
+    padding: 19px 79px;
 }
 
 .pagination-item a:hover,
 .pagination-item a:focus {
-  background-color: #dfdfdf;
+    border-radius: 3px;
+    background-color: #dfdfdf;
 }
 
 .pagination-item a:active {
-    color: rgba(0, 0, 0, 0.3);
-    background-color: #ffffff;
+    color: rgba(0, 1, 1, 0.1);
+    background-color: #d5d5d5;
 }
 
 .pagination-item-current a {
+    border: solid 3px #dbdbdb;
+    border-radius: 3px;    
     color: #000000;  
     background-color: #ffffff;
 }
@@ -501,7 +669,10 @@ a.button:active {
     background-position: 50% 50%;
 }
 
-.modal {    
+/* Всплывающее окно */
+
+.modal {
+    
     width: 960px;
     height: 590px;
     padding: 0;
@@ -512,14 +683,18 @@ a.button:active {
 }
 
 .modal h2 {
+
     padding: 0;
     margin: 0;
+    /*width: 306px;*/
+    line-height: 33px;
     font-size: 45px;
-    line-height: 45px;
     text-align: left;
-    margin-left: 100px;
+    
     padding-top: 73px;
+    margin-left: 100px;
     margin-bottom: 49px;
+    
 }
 
 .appointment {
@@ -533,14 +708,19 @@ a.button:active {
     padding: 0;
     margin: 0;
     width: 360px;
+    
     height: 50px;
     font-size: 16px;
-    line-height: 18px;
+    padding-top: 18px;
+    padding-left: 15px;
+    padding-bottom: 16px;
     opacity: 0.5;
     color: rgba(68, 68, 68, 0.5);
     border: solid 2px #d7dcde;
     border-radius: 4px;
+    margin-top: 12px;
     margin-bottom: 36px;
+    box-sizing: border-box;
 }
 
 .input:hover {
@@ -553,41 +733,44 @@ a.button:active {
 
 .item-input {
     padding: 0;
-    margin: 0;
-    line-height: 18px;
+    margin: 0px;
+    height: 13px;
     font-weight: bold;
-    margin-bottom: 12px;
 }
 
 .comment {
+    display: block;
     padding: 0;
     margin: 0;
     width: 760px;
     height: 118px;
-    font-size: 16px;
-    line-height: 18px;
+    font-size: 17px;
+    padding-top: 14px;
+    padding-left: 15px;
+    
     opacity: 0.5;
     color: rgba(68, 68, 68, 0.5);
     border: solid 2px #d7dcde;
     border-radius: 4px;
+    margin-top: 12px;
     margin-left: 100px;
     margin-bottom: 47px;
+    box-sizing: border-box;
 }
 .item-comment {
     padding: 0;
     margin: 0;
-    line-height: 18px;
+    
     font-weight: bold;
-    text-align: left;
     margin-left: 100px;
 }
 
 .username {
     padding: 0;
     margin: 0;;    
-    text-align: left;
+    
     margin-left: 100px;
-    margin-right: 40px;
+    margin-right: 36px;
 }
 
 .email {
@@ -598,5 +781,143 @@ a.button:active {
 .button-send {
     padding: 0;
     margin: 0;
+    
+    text-transform: uppercase;
+    text-align: center;
     margin-left: 100px;
+    
 }
+
+.modal-close {
+    position: relative;
+    content: "";
+    /*top: 50%;*/
+    
+    left: 90%;
+    
+    width: 21px;
+    height: 21px;
+    cursor: pointer;
+}
+
+/* Стилизация фильтра прайса*/
+
+.filter-item {
+    margin: 0;
+    padding: 0;
+    
+    border: none;
+    
+    /* Для демонстрации */
+    /*Добавляем вспомогательные стили. Обратите внимание, что отступы задаются только для того, чтобы фильтр удобно было смотреть в текущей демонстрации.*/
+    width: 260px;
+    margin: 50px auto; 
+  }
+  
+  /*Зададим ширину фильтра и внешний отступ сверху.*/
+  .range-filter {
+    width: 260px;
+    margin-top: 49px;
+  }
+  /*Задаём стили заголовка.*/
+  .filter-item legend {
+    font-size: 18px;
+    line-height: 24px;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+  
+  /*Перейдём к блоку с ползунками. Для начала добавим его оформление.
+  Зададим высоту, цвет фона и скругление углов, как в макете.*/
+  .range-controls {
+    position: relative;/*Перейдём к кружкам, которыми мы будем управлять нашим фильтром.
+     Мы будем позиционировать их абсолютно, поэтому первым шагом необходимо добавить обёртке position: relative.*/
+    
+    height: 41px;/*Так как внутренние отступы учитываются в размер объекта, уменьшим высоту объекта на размер верхнего внутреннего отступа.
+    Было 80px*/
+    margin-bottom: 15px;/*Добавим отступ снизу, чтобы отодвинуть нижний блок.*/
+    padding-top: 39px;/*Теперь выровняем шкалу по центру нашего элемента.
+    Для этого зададим верхний внутренний отступ равный общей высоте блока, минус высота шкалы и все это делённое на 2:( (80px — 2px) / 2 = 39px ).*/
+    padding-right: 20px;/*Остаётся добавить внутренние отступы по бокам.*/
+    padding-left: 20px;/*Остаётся добавить внутренние отступы по бокам.*/ 
+    
+    background-color: #f1f1f1;
+    
+    border-radius: 5px;
+  }
+  
+  /*Добавим стили шкалы – высоту и цвет фона.*/
+  .range-controls .scale {
+    height: 2px;
+  
+    background: #d7dcde;
+  }
+  
+  /*Теперь добавим стили для изменяющейся шкалы внутри .scale. 
+  У него такая же высота, зелёный цвет фона и, пока, произвольная ширина.*/
+  .range-controls .bar {
+    width: 70%;
+    height: 2px;
+  
+    background: #00ca74;
+  }
+  
+  /*Для начала поработаем над их внешним видом.*/
+  .range-controls .toggle {
+    position: absolute;/*Теперь спозиционируем их. Для начала сверху.*/
+    top: 31px;/*Теперь спозиционируем их. Для начала сверху.*/
+    left: 0;/*Теперь спозиционируем их. Для начала сверху.*/
+    
+    width: 4px;/*Добавим ширину*/
+    height: 4px;/*Добавим высоту*/
+    padding: 0;
+  
+    border: 8px solid #ffffff;/*Границам добавим обводку.*/
+    background-color: #ababab;/*Добавим цвет заднего фона.*/
+    box-shadow: 0 2px 1px 0 #cfcfcf;/*Добавим тень.*/
+    border-radius: 50%;/*Закруглим их.*/
+    cursor: pointer;/*Последним штрихом добавим курсор с рукой, для этих элементов.*/
+  }
+  
+  /*А теперь через уникальные классы добавим позицию слева, для каждого элемента.*/
+  .range-controls .toggle-min {
+    left: 50px;/*Управлять шириной прогресс бара можно ползунками - меняя значение в стилях.*/
+  }
+  
+  .range-controls .toggle-max {
+    left: 110px;/*Управлять шириной прогресс бара можно ползунками - меняя значение в стилях.*/
+  }
+  
+  .price-controls {
+    font-size: 0;/*Уберём отступ между ними. Было */
+  }
+  
+  /*Перейдём к нижней части. Зададим для label строчно-блочный тип отображения и ширину 50%.*/
+  .price-controls label {
+    display: inline-block;
+    width: 50%;
+    
+    font-size: 16px;/*И восстановим размер шрифта внутри них.*/
+    text-transform: uppercase;
+  }
+  
+  /*Перейдём к стилизации полей ввода. В первую очередь, зададим параметры шрифта - семейство, размер, выравнивание по горизонтали и цвет.*/
+  .price-controls input {
+    width: 65px;/*Затем зададим ширину*/
+    padding: 8px 10px;/*Затем зададим внутренние отступы.*/
+    margin-left: 10px;/*Добавим отступ слева от текста.*/
+    
+    font-family: Roboto, Arial, sans-serif;/*зададим параметры семейства*/
+    font-size: 16px;/*зададим размер шрифта*/
+    text-align: center;/*выравнивание по горизонтали*/
+    color: #283136;/*зададим цвет*/
+    /*Продолжим стилизацию. Уберём обводку полей, добавим цвет фона и скругление углов.*/
+    border: none;/*Уберём обводку полей*/
+    border-radius: 5px;/*добавим скругление углов*/
+    background: #f1f1f1;/*добавим цвет фона*/
+  }
+  
+  /*Теперь правому блоку зададим горизонтальное выравнивание по правому краю.*/
+  .max-price {
+    text-align: right;
+  }
