@@ -13,7 +13,7 @@
             <div class="main-navigation-wrapper">
                 <div class="container">        
                     <a class="main-header-logo" href="index.html">
-                        <img src="img/nerds-logo.svg" width="160" height="65" alt="Нёрдс">
+                        <img src="img/nerds-logo.svg" width="160" height="65" alt="Логотип Нёрдс">
                     </a>
                     <ul class="site-navigation">
                         <li>
@@ -100,6 +100,70 @@
                 </li>
             </ul>
         </section>
+        <section class="about-us">
+            <div class="description">
+                <h2>Мы — маленькая, но гордая дизайн-студия из Краснодара.</h2>
+                <p>Исповедуем принципы минимализма и чистоты. Ставим математический расчет превыше креатива. Работаем не покладая рук, как роботы.</p>
+                <h3>Выполняем заказы на разработку:</h3>
+                <ul class="description-list"> 
+                    <li class="description-item">Веб-сайтов любой сложности</li>
+                    <li class="description-item">Мобильных приложений для iOS и Android</li>
+                    <li class="description-item">Слайдшоу и видео для корпоративных презентаций</li>
+                </ul>
+            </div>
+            <div class="statistics">
+                <img class="pictures" src="img/nerds-picture.png" width="360" height="208" alt="Картинка Нердс">
+                <p>с 2004 года Любим точность во всем:</p>
+                <table cellpadding="9">                        
+                    <tr>
+                        <td class="percentages">146
+                            <sup>%</sup>
+                        </td>
+                        <td class="percentages">100
+                            <sup>%</sup>
+                        </td>
+                        <td class="percentages">50
+                            <sup>%</sup>
+                        </td> 
+                    </tr>
+                    <tr>
+                        <td class="details">Уровень самоотдачи</td>
+                        <td class="details">Соблюдение сроков</td>
+                        <td class="details">Минимальная предоплата</td>
+                    </tr>
+                </table>
+            </div>  
+        </section>
+        <section class="partners">
+            <ul class="partners-list">
+                <li class="partners-item">
+                    <a href="">
+                        <img src="img/logo1.png" width="199" height="68" alt="HTML Academy">
+                    </a>
+                </li>
+                <li class="partners-item">
+                    <a href="#">
+                        <img src="img/logo2.png" width="209" height="90" alt="Borodinski">
+                    </a>
+                </li>
+                <li class="partners-item">
+                    <a href="#">
+                        <img src="img/logo3.png" width="185" height="52" alt="Pink">
+                    </a>
+                </li>
+                <li class="partners-item">
+                    <a href="#">
+                        <img src="img/logo4.png" width="173" height="84" alt="Mishka">
+                    </a>
+                </li>
+            </ul>
+        </section>
+        <section class="modal-map">
+            <h2 class="visually-hidden">Как до нас добраться</h2>
+            <p>
+                <img src="img/map.jpg" width="1200" height="416" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">
+            </p>
+        </section>  
     </main>
     <footer class="main-footer">
         <div class="container">
@@ -136,20 +200,21 @@
     <section class="modal">
         <h2>Напишите нам</h2>
         <form action="https://echo.htmlacademy.ru" method="post">
+            <div class="feed">
             <div class="appointment username">
                 <label class="item-input">
-                    Ваше имя:
+                    <p>Ваше имя:</p>
                     <input class="input" type="text" name="username" placeholder="Имя Фамилия" required>                    
                 </label>                
             </div>
             <div class="appointment email">
                 <label class="item-input email">
-                    Ваш e-mail:
+                    <p>Ваш e-mail:</p>
                     <input class="input" type="email" name="email" placeholder="e-mail@example.com" required>                    
                 </label>                
-            </div>
+            </div></div>
                 <label class="item-comment">
-                    Текст письма:
+                    <p>Текст письма:</p>
                     <textarea class="comment" name="comment" placeholder="В свободной форме"  rows="10" cols="15" required></textarea>                    
                 </label>
             <button class="button-send" type="submit">
@@ -160,5 +225,7 @@
             <span class="visually-hidden">Закрыть</span>
         </button>
     </section>
+
+ 
   </body>
 </html>
