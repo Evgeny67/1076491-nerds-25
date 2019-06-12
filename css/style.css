@@ -322,16 +322,8 @@ img {
 
 .service {
     position: relative;
-}
-
-.service::after {
-    content: "";
-    position: absolute;
-    right: 0px;
-    top: 507px;
-    left: 0px;
-    height: 2px;
-    background-color: #eeeeee;
+    border-bottom: 2px solid #eeeeee;
+    margin-bottom: 40px;
 }
 
 .service-list {
@@ -339,8 +331,8 @@ img {
     margin: 0;
     padding: 0;
     margin-top: 80px;
-    margin-bottom: 80px;
-    margin-bottom: 162px;
+    margin-bottom: 98px;
+    margin-right: 100px;
     list-style: none;
 }
 
@@ -349,15 +341,20 @@ img {
 }
 
 .service-list h3 {
+    padding: 0;
+    margin: 0;
     font-size: 24px;
-    padding: 30px 0 26px;
+    margin-top: 30px;
+    margin-bottom: 26px;
 }
 
 .service-list p {
+    padding: 0;
+    margin: 0;
     width: 238px;
     line-height: 24px;
     color: #283136;
-    padding: 0 0 35px;
+    margin-bottom: 51px;
 }
 
 .button {
@@ -412,10 +409,16 @@ img {
     padding: 0;
     margin: 0;
     display: flex;
-    margin-bottom: 76px;
+    /*margin-bottom: 76px;*/
+}
+.description {
+    margin-top: 40px;
+    margin-bottom: 52px;
 }
 
 .description h2 {
+    padding: 0;
+    margin: 0;
     font-size: 45px;
     line-height: 45px;
     margin-right: 152px;
@@ -423,6 +426,8 @@ img {
 }
 
 .description p {
+    padding: 0;
+    margin: 0;
     font-size: 16px;
     line-height: 24px;
     color: #283136;
@@ -479,6 +484,7 @@ img {
     margin: 0;
     margin-bottom: 41px;
 }
+
 .percentages {
     padding: 0;
     margin: 0;
@@ -499,31 +505,16 @@ sup {
     line-height: 18px;
 }
 
-
 .partners {
     padding: 0;
     margin: 0;
+    /*height: 90px;*/
     position: relative;
-    margin-bottom: 126px;
-}
-
-.partners::before,
-.partners::after {
-    content: "";
-    position: absolute;
-    right: 0px;
-    left: 0px;
-    
-    height: 2px;
-    background-color: #eeeeee;
-}
-
-.partners::before {
-    bottom: 136px;
-}
-
-.partners::after {
-    top: 128px;
+    border-top: 2px solid #eeeeee;
+    border-bottom: 2px solid #eeeeee;
+    padding-top: 46px;
+    padding-bottom: 44px;
+    margin-bottom: 80px;
 }
 
 .partners a {
@@ -616,10 +607,8 @@ sup {
 .social::before {
     content: "";
     position: relative;
-
     width: 21px;
     height: 21px;
-    background-color: #e1e1e1;
     background-repeat: no-repeat;
     background-position: 50% 50%;
 }
@@ -633,31 +622,6 @@ sup {
     background-color: #d7373b;
     opacity: 0.3;
 }
-
-.browser::before {
-    background-image: url("../img/browser.svg");
-}
-
-.browser::before {
-    opacity: 0.12;
-}
-
-.browser:hover::before {
-    content: "";
-    position: absolute;
-
-    top: 0;
-    left: 0;
-    width: 360px;
-    height: 40px;
-    background-color: #ffffff;
-}
-/*
-.browser-sedona img {
-    position: relative;
-    top: 40px;
-}
-*/
 
 .page-title {
     padding: 0;
@@ -734,26 +698,63 @@ sup {
 
 .catalog {
     width: 760px;
+    
 }
 .catalog-list {
-    /*position: relative;*/
     display: flex;
     flex-wrap: wrap;
     list-style: none;
     padding: 0;
     margin: 0;
-    /*margin-top: 133px;*/
-    margin-bottom: 60px;
     list-style: none;
 }
 
 .catalog-item {
+    padding: 0;
+    margin: 0;
+    position: relative;
     width: 360px;
-    /*position: relative;
-    z-index: 2;*/
+    
     margin-bottom: 33px;
     margin-right: 40px;
 }
+
+.catalog-item::before {
+    background-image: url("../img/browser.svg");
+    opacity: 0.12;
+}
+
+.catalog-item::before {
+    content: "";
+    display: block;
+    
+    top: 0;
+    left: 0;
+    width: 360px;
+    height: 40px;
+    background-color: #ffffff;
+}
+
+.project {
+    padding: 0;
+    margin: 0;
+    width: 360px;
+    height: 231px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    
+    /*opacity: 0;*/
+    text-align: center;
+    background-color: #eeeeee;
+}
+/*
+.catalog-current.project:hover,
+.catalog-current.project:focus,
+.catalog-current.project:active {
+    opacity: 1; 
+}
+*/
 .catalog-item:nth-child(2n) {
     margin-right: 0;
 }
@@ -803,22 +804,13 @@ a.button:active {
     background-color: #fb565a;
 }
 
-
-.project {
-    width: 360px;
-    height: 231px;
-       
-    z-index: 1;
-    text-align: center;
-    background-color: #eeeeee;
-}
-
 .pagination-list {
     display: flex;
     flex-wrap: wrap;
     list-style: none;
     padding: 0;
     margin: 0;
+    margin-top: 27px;
     margin-bottom: 60px;
 }
 
@@ -827,7 +819,6 @@ a.button:active {
     line-height: 18px;
     
     border-radius: 3px;
-    /*text-align: center;*/
     background-color: #eeeeee;   
     margin-right: 11px;
 }
@@ -1177,7 +1168,7 @@ p.phone a {
     list-style: none;
     padding: 0;
     margin: 0;
-    margin-bottom: 59px;
+    margin-bottom: 60px;
 }
 
 .filter-sort h3 {
