@@ -38,7 +38,7 @@
             </div>
         </nav>
     </header>
-    <main class="">
+    <main>
         <h1 class="page-title">Магазин готовых шаблонов</h1>
             <div class="catalog-columns container">
                 <section class=filters>
@@ -68,22 +68,16 @@
                             <legend>Сетка:</legend>
                             <ul>
                                 <li class="filter-option">
-                                    <label>
-                                        <input class="filter-input filter-input-radio" type="radio" name="grid" value="adaptive" checked>
-                                        Адаптивная
-                                    </label>
+                                    <input class="visually-hidden filter-input filter-input-radio current" type="radio" name="grid" value="adaptive" id="filter-adaptive" checked>
+                                    <label class="radio-active" for="filter-adaptive">Адаптивная</label>
                                 </li>
                                 <li class="filter-option">
-                                    <label>
-                                        <input class="filter-input filter-input-radio" type="radio" name="grid" value="fixed">
-                                        Фиксированная
-                                    </label>
+                                    <input class="visually-hidden filter-input filter-input-radio" type="radio" name="grid" value="fixed" id="filter-fixed">
+                                    <label for="filter-fixed">Фиксированная</label>
                                 </li>
                                 <li class="filter-option">
-                                    <label>
-                                        <input class="filter-input filter-input-radio" type="radio" name="grid" value="rubber">
-                                    Резиновая
-                                    </label>
+                                    <input class="visually-hidden filter-input filter-input-radio" type="radio" name="grid" value="rubber" id="filter-grid">
+                                    <label for="filter-grid">Резиновая</label>
                                 </li>
                             </ul>
                         </fieldset>
@@ -91,34 +85,24 @@
                             <legend>Особенности:</legend>
                             <ul>
                                 <li class="filter-option">
-                                    <label>
-                                        <input class="" type="checkbox" name="slider" value="slider" checked>
-                                    Слайдер
-                                    </label>
+                                    <input class="visually-hidden filter-input-checkbox" type="checkbox" name="slider" value="slider" id="filter-slider" checked>
+                                    <label for="filter-slider">Слайдер</label>
                                 </li>
                                 <li class="filter-option">
-                                    <label>
-                                        <input class="" type="checkbox" name="advantages" value="advantages">
-                                    Блок преимуществ
-                                    </label>
+                                    <input class="visually-hidden filter-input-checkbox" type="checkbox" name="advantages" value="advantages" id="filter-advantages">
+                                    <label for="filter-advantages">Блок преимуществ</label>
                                 </li>
                                 <li class="filter-option">
-                                    <label>
-                                        <input class="" type="checkbox" name="news" value="news" checked>
-                                    Новости
-                                    </label>
+                                    <input class="visually-hidden filter-input-checkbox" type="checkbox" name="news" value="news" id="filter-news" checked>
+                                    <label for="filter-news">Новости</label>
                                 </li>
                                 <li class="filter-option">
-                                    <label>
-                                        <input class="" type="checkbox" name="gallery" value="gallery">
-                                    Галерея
-                                    </label>
+                                    <input class="visually-hidden filter-input-checkbox" type="checkbox" name="gallery" value="gallery" id="filter-gallery">
+                                    <label for="filter-gallery">Галерея</label>
                                 </li>
                                 <li class="filter-option">
-                                    <label>
-                                        <input class="" type="checkbox" name="basket" value="basket">
-                                    Корзина
-                                    </label>
+                                    <input class="visually-hidden filter-input-checkbox" type="checkbox" name="basket" value="basket" id="filter-basket">
+                                    <label for="filter-basket">Корзина</label>
                                 </li>                                                
                             </ul>
                         </fieldset>
@@ -130,18 +114,30 @@
                 <section class="catalog">
                     <ul class="filter-sort">
                         <h3>Сортировать:</h3>
-                        <li class="filter-sort-current">
-                            <a href="">По цене</a>
+                        <li class="filter-sort-price current">
+                            <a href="#">По цене</a>
                         </li>
-                        <li>
-                            <a href="">По типу</a>
+                        <li class="filter-sort-type">
+                            <a href="#">По типу</a>
                             </li>
-                        <li>
-                            <a href="">По названию</a>
+                        <li class="filter-sort-name">
+                            <a href="#">По названию</a>
                         </li>
+                        <li class="icon-current icon-down">
+                            <a href="#">
+                                <span class="visually-hidden">Сортировать по убыванию</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10"><path fill="#231F20" d="M5.5 10L0 0h11"/></svg>
+                            </a>
+                        </li>
+                        <li class="icon icon-up">
+                            <a href="#">
+                                <span class="visually-hidden">Сортировать по возрастанию</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10"><path fill="#231F20" d="M5.5 0L0 10h11z"/></svg>
+                            </a>
+                        </li>                     
                     </ul>
                     <ul class="catalog-list">
-                        <li class="catalog-item catalog-current">
+                        <li class="catalog-item">
                             <a href="#">
                                 <img src="img/sedona.jpg" width="360" height="576" alt="Sedona">
                             </a>
@@ -149,9 +145,9 @@
                                 <h3>
                                     <a href="#">Sedona</a>
                                 </h3>
-                                <p>Информационный сайт для туристов</p>
-                                <a class="button" href="#">9 900 Руб.</a>
-                            </div>                            
+                                <p>Информационный сайт для&nbsp;туристов</p>
+                                <a class="button button-project" href="#">9 900 Руб.</a>
+                            </div>                      
                         </li>
                         <li class="catalog-item">
                                <a href="#">
@@ -161,8 +157,8 @@
                                <h3>
                                    <a href="#">Pink App</a>
                                </h3>
-                               <p>Продуктовый лендинг приложения для iOS и Android</p>
-                               <a class="button" href="#">9 900 Руб.</a>
+                               <p>Продуктовый лендинг приложения&nbsp;для&nbsp;iOS&nbsp;и&nbsp;Android</p>
+                               <a class="button button-project" href="#">9 900 Руб.</a>
                            </div>
                         </li>
                         <li class="catalog-item">
@@ -173,8 +169,8 @@
                                 <h3>
                                     <a href="">Barbershop</a>
                                 </h3>
-                                <p>Сайт салон красоты. Для мужчин, да.</p>
-                                <a class="button" href="#">9 900 Руб.</a>
+                                <p>Сайт салон красоты. Для&nbsp;мужчин,&nbsp;да.</p>
+                                <a class="button button-project" href="#">9 900 Руб.</a>
                             </div>
                         </li>
                         <li class="catalog-item">
@@ -185,8 +181,8 @@
                                 <h3>
                                     <a href="">Mishka</a>
                                 </h3>
-                                <p>Интернет-магазин вязаных игрушек.</p>
-                                <a class="button" href="#">9 900 Руб.</a>
+                                <p>Интернет-магазин вязаных&nbsp;игрушек.</p>
+                                <a class="button button-project" href="#">9 900 Руб.</a>
                             </div>
                         </li>
                         <li class="catalog-item">
@@ -198,7 +194,7 @@
                                     <a href="">A Plus</a>
                                 </h3>
                                 <p>Лендинг курсов повышения квалификации.</p>
-                                <a class="button" href="#">9 900 Руб.</a>
+                                <a class="button button-project" href="#">9 900 Руб.</a>
                             </div>
                         </li>
                         <li class="catalog-item">
@@ -210,7 +206,7 @@
                                     <a href="">Кваст</a>
                                 </h3>
                                 <p>Промо-сайт производителя крафтового кваса.</p>
-                                <a class="button" href="#">9 900 Руб.</a>
+                                <a class="button button-project" href="#">9 900 Руб.</a>
                             </div>
                         </li>                           
                     </ul>
@@ -278,20 +274,20 @@
                         <label class="item-input">
                             Ваше имя:                    
                         </label>
-                        <input class="input" type="text" name="username" placeholder="Имя Фамилия" required>           
+                        <input class="input" type="text" name="username" placeholder="Имя Фамилия" pattern="[A-Za-z]{4}">           
                     </div>
                     <div class="appointment email">
                         <label class="item-input email">
                             Ваш e-mail:                    
                         </label>
-                        <input class="input" type="email" name="email" placeholder="e-mail@example.com" required>         
+                        <input class="input" type="email" name="email" placeholder="e-mail@example.com">         
                     </div>
                 </div>
                 <div class="letter">
                     <label class="item-comment">
                         Текст письма:                    
                     </label>
-                    <textarea class="comment" name="comment" placeholder="В свободной форме"  rows="10" cols="15" required></textarea>
+                    <textarea class="comment" name="comment" placeholder="В свободной форме" rows="10" cols="15"></textarea>
                 </div>
                 <button class="button-send" type="submit">
                     Отправить
