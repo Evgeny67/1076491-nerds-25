@@ -1,5 +1,5 @@
 body {
-    margin: 0px;
+    margin: 0;
     padding: 0;
     min-width: 1200px;
     font-family: "Roboto", Arial, sans-serif;
@@ -47,7 +47,7 @@ img {
 
 .slider {
     position: relative;
-    
+    margin-bottom: 80px;
     background-color: #eeeeee;
 }
 
@@ -168,7 +168,6 @@ img {
     padding: 0;
     margin: 0;
     width: 240px;
-    /*height: 50px;*/
     padding: 19px 55px 18px 53px;
 }
 
@@ -239,7 +238,7 @@ img {
     margin: 0;
     padding: 0;
     list-style: none;
-    margin-top: 83px;
+    padding-top: 83px;
 }
 
 .user-navigation {
@@ -248,28 +247,19 @@ img {
     margin: 0;
     padding: 0;
     list-style: none;
-    margin-top: 83px;
+    padding-top: 83px;
 }
 
-.basket::before {
-    background-image: url("../img/basket-icon.svg");
-}
-
-.basket::before {
+.user-navigation a::before {
     content: "";
     position: absolute;
-    top: 2px;
+    top: 85px;
     left: -26px;
     width: 15px;
     height: 15px;
     opacity: 0.3;
+    background-image: url("../img/basket-icon.svg");
     background-repeat: no-repeat;
-}
-
-.basket:hover::before,
-.basket:focus::before,
-.basket:active::before {
-    opacity: 0.3;
 }
 
 .site-navigation a,
@@ -289,10 +279,10 @@ img {
   color: rgba(0, 0, 0, 0.3);
 }
 
-
 .site-navigation-current {
     position: relative;
 }
+
 .site-navigation-current::after {
     content: "";
     position: absolute;
@@ -309,15 +299,6 @@ img {
     color: #000000;
 }
 
-.user-navigation:hover a,
-.user-navigation:focus a {
-    color: red;
-}
-
-.user-navigation:active a {
-    color: rgba(0, 0, 0, 0.3);
-}
-
 .service {
     position: relative;
     border-bottom: 2px solid #eeeeee;
@@ -326,23 +307,24 @@ img {
 
 .service-list {
     display: flex;
-    margin: 0;
     padding: 0;
-    margin-top: 80px;
-    margin-bottom: 98px;
-    margin-right: 100px;
+    margin: 0;
     list-style: none;
 }
 
 .service-list li {
     margin-right: 100px;
+    padding-bottom: 80px;
+}
+
+.service-list img {
+    margin-bottom: 26px;
 }
 
 .service-list h3 {
     padding: 0;
     margin: 0;
     font-size: 24px;
-    margin-top: 30px;
     margin-bottom: 26px;
 }
 
@@ -350,16 +332,14 @@ img {
     padding: 0;
     margin: 0;
     width: 238px;
-    line-height: 24px;
     color: #283136;
-    margin-bottom: 51px;
+    margin-bottom: 54px;
 }
 
 .button {
-    /*height: 13px;*/
     line-height: 18px;
     color: #ffffff;
-    
+    font-size: 16px;
     text-transform: uppercase;
     text-align: center;
     border: none;
@@ -367,30 +347,31 @@ img {
     background-color: #fb565a;
 }
 
+.button.button-red,
+.button.button-green,
+.button.button-yellow {
+    width: 82px;
+    display: block;
+    padding: 19px 39px 18px;
+}
+
 .button.button-red {
-    width: 160px;
-    height: 50px;
-    padding: 19px 39px 18px;   
     background-color: #fb565a;
 }
 
-.button.button-green {
-    width: 160px;
-    height: 50px;
-    padding: 19px 39px 18px;  
+.button.button-green {  
     background-color: #00ca74;
 }
 
 .button.button-yellow {
-    width: 160px;
-    height: 50px;
-    padding: 19px 39px 18px;
     background-color: #efc84a;
 }
+
 .button.button-red:hover,
 .button.button-red:focus {
     background-color: #e74246;
 }
+
 .button.button-red:active {
     color: rgba(255, 255, 255, 0.3);
     background-color: #d7373b;
@@ -421,7 +402,9 @@ img {
 }
 
 .description {
-    margin-top: 40px;
+    padding: 0;
+    margin: 0;
+    padding-top: 40px;
     margin-bottom: 52px;
 }
 
@@ -461,7 +444,6 @@ img {
     color: #283136;
     position: relative;
     text-align: left;
-
     margin-bottom: 24px;
 }
 
@@ -719,9 +701,7 @@ sup {
 }
 
 .filter-option label {
-    /*display: block;*/
     cursor: pointer;
-    /*user-select: none;*/
 }
 
 .filter-input-radio + label::before,
@@ -758,30 +738,25 @@ input[type="radio"]:checked ~ label::after {
     opacity: 1;
 }
 
-.filter-input-checkbox + label::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 19px;
-    height: 19px;
-    opacity: 0.4;
-    border: 2px solid #4d4d4d;
-    border-radius: 3px;
-}
-
+.filter-input-checkbox + label::before,
 .filter-input-checkbox:checked + label::after {
     content: "";
-  
     position: absolute;
-    top: 0;
     left: 0;
+    top: 0;
     width: 27px;
     height: 23px;
     opacity: 0.4;
-    background-image: url("../img/checkbox-on.svg");
     background-repeat: no-repeat;
     background-position: 0 0;
+}
+
+.filter-input-checkbox + label::before {
+    background-image: url("../img/checkbox-off.svg");
+}
+
+.filter-input-checkbox:checked + label::after {
+    background-image: url("../img/checkbox-on.svg");
 }
 
 .filter-input-checkbox + label:hover::before,
@@ -1098,9 +1073,10 @@ a.button:active {
 }
 
 .modal-close {
+    content: "";
     position: absolute;
     top: 78px;
-    right: 90px;    
+    right: 90px;
     width: 21px;
     height: 21px;
     border: 0;
@@ -1108,37 +1084,25 @@ a.button:active {
     background-color: #ffffff;
 }
 
-.modal-close::before,
-.modal-close::after {
-  content: "";
-
-  position: absolute;
-  top: 8px;
-  left: 2px;
-
-  width: 19px;
-  height: 3px;
-  opacity: 0.3;
-  background-color: red;
-}
-
 .modal-close::before {
-    transform: rotate(45deg);
-}
-  
-.modal-close::after {
-    transform: rotate(-45deg);
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 21px;
+    height: 21px;
+    opacity: 0.3;
+    background-image: url("../img/close-cross.svg");
 }
 
-.modal-close:hover::after,
 .modal-close:hover::before {
     opacity: 1;
 }
 
-.modal-close:active::after,
 .modal-close:active::before {
     opacity: 0.1;
 }
+
 
 /* Стилизация карты */
 
