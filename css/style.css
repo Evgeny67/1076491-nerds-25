@@ -41,6 +41,7 @@ img {
     height: auto;
 }
 */
+
 .main-header {
     background-color: #eeeeee;
 }
@@ -150,16 +151,16 @@ img {
 
 .slider-item h3 {
     max-width: 600px;
-    margin: 0;
-    margin-bottom: 27px;
-    
     font-size: 55px;
     line-height: 55px;
     font-weight: 500;
+    margin: 0;
+    margin-bottom: 27px;
 }
 
 .slider-item p {
     max-width: 430px;
+    line-height: 24px;
     margin: 0;
     margin-bottom: 56px;
 }
@@ -167,8 +168,11 @@ img {
 .slider-item-button {
     padding: 0;
     margin: 0;
+    display: block;
     width: 240px;
-    padding: 19px 55px 18px 53px;
+    height: 13px;
+    line-height: 13px;
+    padding: 19px 0px 18px;
 }
 
 .button.slider-item-button:hover,
@@ -216,7 +220,7 @@ img {
 .main-navigation-wrapper {
     width: 100%;
     background-color: #eeeeee;
-    padding-bottom: 0px;
+    padding-bottom: 0;
 }
 
 .main-navigation-wrapper .container {
@@ -225,7 +229,7 @@ img {
 }
 
 .main-navigation-wrapper li {
-    margin-right: 48px;
+    margin-right: 46px;
 }
 
 .main-navigation-wrapper li:last-child {
@@ -234,7 +238,6 @@ img {
 
 .site-navigation {
     display: flex;
-    width: 440px;
     margin: 0;
     padding: 0;
     list-style: none;
@@ -264,6 +267,8 @@ img {
 
 .site-navigation a,
 .user-navigation a {
+    font-weight: 500;
+    text-transform: uppercase;
     color: #000000;
 }
 
@@ -286,9 +291,9 @@ img {
 .site-navigation-current::after {
     content: "";
     position: absolute;
-    right: 0px;
+    right: 0;
     bottom: 12px;
-    left: 0px;
+    left: 0;
     height: 2px;
     background-color: #fb565a;
 }
@@ -332,16 +337,17 @@ img {
     padding: 0;
     margin: 0;
     width: 238px;
+    line-height: 24px;
     color: #283136;
     margin-bottom: 54px;
 }
 
 .button {
-    line-height: 18px;
     color: #ffffff;
     font-size: 16px;
     text-transform: uppercase;
     text-align: center;
+    font-weight: 500;
     border: none;
     border-radius: 3px;
     background-color: #fb565a;
@@ -351,6 +357,8 @@ img {
 .button.button-green,
 .button.button-yellow {
     width: 82px;
+    height: 13px;
+    line-height: 13px;
     display: block;
     padding: 19px 39px 18px;
 }
@@ -405,31 +413,38 @@ img {
     padding: 0;
     margin: 0;
     padding-top: 40px;
+    margin-right: 149px;
     margin-bottom: 52px;
 }
 
 .description h2 {
+    width: 650px;
     padding: 0;
     margin: 0;
+    font-weight: 500;
     font-size: 45px;
-    line-height: 45px;
-    margin-right: 152px;
+    line-height: 1;
+    text-align: left;
     margin-bottom: 35px;
 }
 
 .description p {
+    width: 616px;
     padding: 0;
     margin: 0;
     font-size: 16px;
     line-height: 24px;
     color: #283136;
-    margin-right: 185px;
     margin-bottom: 47px;
 }
 
 .description h3 {
     padding: 0;
     margin: 0;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: bold;
+    color: #000000;
     margin-bottom: 24px;
 }
 
@@ -453,22 +468,19 @@ img {
     height: 2px;
     background-color: #fb565a;
     position: absolute;
-    top: 12px;
+    top: 8px;
     left: -34px;
 }
 
 .statistics p {
-    width: 328px;
-    height: 15px;
+    width: 360px;
     padding: 0;
     margin: 0;
     font-size: 16px;
-    line-height: 24px;
     font-weight: bold;
     text-align: center;
     text-transform: uppercase;
-    padding: 0 17px 0 15px;
-    margin-bottom: 49px;
+    margin-bottom: 20px;
 }
 
 .pictures {
@@ -480,19 +492,20 @@ img {
 .percentages {
     padding: 0;
     margin: 0;
-    vertical-align: center;
     font-size: 45px;
     font-weight: bold;
-    line-height: 10px;
-    
-    padding: 0 0 27px 0;
+    padding-right: 25px;
+    padding-bottom: 25px;
 }
 
 sup {
+    padding: 0;
+    margin: 0;
     font-size: 24px;
 }
 
 .details {
+    text-align: left;
     color: #283136;
     line-height: 18px;
 }
@@ -567,20 +580,18 @@ sup {
 .main-footer b {
     display: flex;
     font-size: 36px;
-    line-height: 36px;
+    font-weight: bold;
     padding: 0;
     margin: 0;
-    margin-left: 139px;
     margin-bottom: 12px;
 }
 
 .main-footer p {
-    display: flex; 
-    line-height: 22px;
+    display: flex;
+    text-align: left;
     color: #444444;
     padding: 0;
     margin: 0;
-    margin-left: 141px;
 }
 
 .footer-social {
@@ -588,6 +599,7 @@ sup {
     padding: 0;
     margin: 0;
     list-style: none;
+    margin-right: 139px;
 }
 
 .footer-social a {
@@ -647,6 +659,7 @@ sup {
     padding: 0;
     margin: 0;
     font-size: 55px;
+    font-weight: 500;
     line-height: 55px;
     text-align: center;
     margin-bottom: 60px;
@@ -682,8 +695,8 @@ sup {
     font-size: 18px;
     line-height: 30px;
     font-weight: bold;
-    margin-bottom: 21px;
     text-transform: uppercase;
+    margin-bottom: 21px;
 }
 
 .filter ul {
@@ -739,7 +752,7 @@ input[type="radio"]:checked ~ label::after {
 }
 
 .filter-input-checkbox + label::before,
-.filter-input-checkbox:checked + label::after {
+.filter-input-checkbox:checked + label::before {
     content: "";
     position: absolute;
     left: 0;
@@ -755,22 +768,21 @@ input[type="radio"]:checked ~ label::after {
     background-image: url("../img/checkbox-off.svg");
 }
 
-.filter-input-checkbox:checked + label::after {
+.filter-input-checkbox:checked + label::before {
     background-image: url("../img/checkbox-on.svg");
 }
 
 .filter-input-checkbox + label:hover::before,
-.filter-input-checkbox:checked + label:hover::after {
+.filter-input-checkbox:checked + label:hover::before {
     opacity: 1;
 }
 
-input[type="checkbox"]:checked ~ label::before, 
-input[type="checkbox"]:checked ~ label::after {
+input[type="checkbox"]:checked ~ label::before {
     opacity: 0.1;
 }
 
 .filter-button {
-    padding: 19px 88px 18px 89px;
+    padding: 0;
     width: 260px;
     height: 50px;
     font-size: 16px;
@@ -874,12 +886,10 @@ input[type="checkbox"]:checked ~ label::after {
 
 .catalog-item p {    
     padding: 0;
-    margin: 0;
     margin: 0 auto;
-    margin-bottom: 46px;
+    margin-bottom: 30px;
     line-height: 18px;
     width: 225px;
-    height: 34px;
     color: #666666;
 }
 
@@ -894,7 +904,11 @@ a.button:active {
 
 .button-project {
     width: 200px;
-    padding: 19px 60px 18px 62px;
+    height: 13px;
+    display: block;
+    line-height: 13px;
+    padding: 19px 0 18px;
+    margin-left: 80px;
 }
 
 .pagination-list {
@@ -903,16 +917,17 @@ a.button:active {
     list-style: none;
     padding: 0;
     margin: 0;
-    margin-top: 27px;
+    padding-top: 20px;
     margin-bottom: 60px;
 }
 
 .pagination-item {
     padding: 0;
     margin: 0;
-    
+    display: block;
     color: #000000;
-    line-height: 18px;
+    text-align: center;
+    font-weight: 500;
     border-radius: 3px;
     background-color: #eeeeee; 
     margin-right: 11px;
@@ -924,13 +939,17 @@ a.button:active {
 
 .pagination-item a {
     display: block;
-    padding: 19px 21px;
+    width: 8px;
+    line-height: 12px;
+    padding: 18px 21px;
     color: #000000;  
 }
 
 .pagination-item.next a {
+    width: 102px;
+    line-height: 14px;  
     text-transform: uppercase;
-    padding: 19px 79px;
+    padding: 18px 79px;
 }
 
 .pagination-item a:hover,
@@ -984,10 +1003,10 @@ a.button:active {
     padding: 0;
     margin: 0;
     font-size: 45px;
+    font-weight: 500;
     line-height: 45px;
-    height: 33px;
-    margin-top: 73px;/**/
-    margin-left: 100px;/**/
+    padding-top: 73px;
+    padding-left: 100px;
     margin-bottom: 49px;
 }
 
@@ -996,7 +1015,7 @@ a.button:active {
     margin: 0;
     display: flex;
     width: 760px;
-    margin-left: 100px;
+    padding-left: 102px;
 }
 
 .input {
@@ -1027,7 +1046,7 @@ a.button:active {
 }
 
 .letter {
-    margin-left: 100px
+    padding-left: 102px;
 }
 
 .input:hover,
@@ -1044,8 +1063,7 @@ a.button:active {
 .item-input,
 .item-comment {
     padding: 0;
-    margin: 0px;
-    height: 13px;
+    margin: 0;
     font-size: 16px;
     line-height: 18px;
     font-weight: bold;
@@ -1087,8 +1105,8 @@ a.button:active {
 .modal-close::before {
     content: "";
     position: absolute;
-    top: 0px;
-    right: 0px;
+    top: 0;
+    right: 0;
     width: 21px;
     height: 21px;
     opacity: 0.3;
@@ -1112,7 +1130,6 @@ a.button:active {
     position: absolute;
     z-index: 2;
     margin-top: 54px;
-    margin-left: 140px;
     width: 319px;
     height: 308px;
     background-color: #ffffff;
@@ -1122,21 +1139,23 @@ a.button:active {
     padding: 0;
     margin: 0;
     font-size: 18px;
-    /*line-height: 30px;*/
+    color: #000000;
     font-weight: bold;
+    text-align: left;
     text-transform: uppercase;
-    margin-top: 54px;
-    margin-left: 50px;
+    padding-top: 54px;
+    padding-left: 50px;
     margin-bottom: 32px;
 }
 
 .map-contacts p {
     padding: 0;
+    
+    width: 200px;
     font-size: 16px;
-    line-height: 18px;
-    width: 200px;    
+    line-height: 18px; 
     color: #666666;
-    margin-left: 50px;
+    padding-left: 50px;
 }
 
 p.phone {
@@ -1147,18 +1166,17 @@ p.phone a {
     color: #666666;
 }
 
-.button-send.write {
+.write {
     padding: 0;
     margin: 0;
     width: 219px;
-    font-weight: 500;
-    border: none;
     margin-left: 50px;
 }
 
 .map {
     margin-bottom: 69px;
 }
+
 .map iframe {
     width: 100%;
     border: none;   
@@ -1181,9 +1199,9 @@ p.phone a {
 
 .filter-item legend {
     font-size: 18px;
-    line-height: 24px;
+    letter-spacing: 0.18px;
     text-transform: uppercase;
-    font-weight: 700;
+    font-weight: bold;
     margin-bottom: 56px;
 }
   
@@ -1264,46 +1282,29 @@ p.phone a {
 
 .filter-sort {
     display: flex;
-    
+    justify-content: space-between;
     list-style: none;
     padding: 0;
     margin: 0;
     margin-bottom: 60px;
 }
 
-.filter-sort h3 {
+.filter-sort .sort {
     padding: 0;
     margin: 0;
-    
     font-size: 18px;
-    line-height: 18px;
     font-weight: bold;
     text-transform: uppercase;
-    margin-right: 267px;
+   
+    padding-right: 237px;
 }
 
 .filter-sort a {
     padding: 0;
     margin: 0;
     font-size: 14px;
-    line-height: 18px;
     color: rgba(0, 0, 0, 0.3);
     text-transform: uppercase;
-}
-
-.filter-sort-price {
-    margin-right: 26px;
-}
-
-.filter-sort-type {
-    margin-right: 27px;
-}
-
-.filter-sort-name {
-    margin-right: 48px;
-}
-.direction-down {
-    margin-right: 18px;
 }
 
 .direction a {
