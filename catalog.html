@@ -10,12 +10,11 @@
     <body class="inner-page">
         <header class="main-header">
             <nav class="main-navigation">
-                <div class="main-navigation-wrapper">
-                    <div class="container"> 
-                        <a class="main-header-logo" href="index.html">
+                <div class="container"> 
+                    <a class="main-header-logo" href="index.html">
                             <img src="img/nerds-logo.svg" width="160" height="65" alt="Нёрдс">
-                        </a>
-                        <ul class="site-navigation">
+                    </a>
+                    <ul class="site-navigation">
                             <li>
                                 <a href="studio.html">Студия</a>
                             </li>
@@ -28,20 +27,20 @@
                             <li>
                                 <a href="contacts.html">Контакты</a>
                             </li>
-                        </ul>
-                        <ul class="user-navigation">
+                    </ul>
+                    <ul class="user-navigation">
                             <li>
                                 <a class="basket" href="#">Корзина</a>
                             </li>
-                        </ul>
-                    </div>
+                    </ul>
                 </div>
             </nav>
         </header>
         <main>
             <h1 class="page-title">Магазин готовых шаблонов</h1>
-            <div class="catalog-columns container">
-                <section class=filters>
+            <div class="container">
+                <div class="catalog-columns">
+                    <section class=filters>
                     <h2 class=visually-hidden>Фильтр товаров</h2>
                     <!-- Фильтр прайса -->
                     <form method="get" action="https://echo.htmlacademy.ru">
@@ -50,14 +49,14 @@
                             <div class="range-filter">
                                 <div class="range-controls">
                                     <div class="scale">
-                                        <div class="bar" style="margin-left: 20%; width: 30%"></div>
+                                        <div class="bar" style="margin-left: 0%; width: 70%"></div>
                                     </div>
                                     <div class="toggle toggle-min"></div>
                                     <div class="toggle toggle-max"></div>
                                 </div>
                                 <div class="price-controls">
                                     <label class="min-price">от <input name="min-price" type="text" value="0"></label>
-                                    <label class="max-price">до <input name="max-price" type="text" value="15000"></label>
+                                    <label class="max-price">до <input name="max-price" type="text" value="15 000"></label>
                                 </div>
                             </div>
                         </fieldset>
@@ -110,8 +109,8 @@
                             Показать
                         </button>
                     </form>
-                </section>
-                <section class="catalog">
+                    </section>
+                    <section class="catalog">
                     <ul class="filter-sort">
                         <li class="sort">Сортировать:</li>
                         <li class="filter-sort-price current">
@@ -224,7 +223,8 @@
                             <a href="#">Следующая</a>
                         </li>
                     </ul>
-                </section>
+                    </section>
+                </div>
             </div>
             <section class="map">
                 <h2 class="visually-hidden">Как до нас добраться</h2>
@@ -282,7 +282,7 @@
                         <label class="item-input email">
                             Ваш e-mail:                    
                         </label>
-                        <input class="input" type="email" name="email" placeholder="e-mail@example.com">         
+                        <input class="input" type="email" name="email" placeholder="email@example.com">         
                     </div>
                 </div>
                 <div class="letter">
