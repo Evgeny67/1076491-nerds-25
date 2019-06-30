@@ -444,7 +444,6 @@ a {
     padding: 0;
     margin: 0;
     list-style: none;
-    padding-left: 35px;
 }
 
 .description-item {
@@ -452,6 +451,7 @@ a {
     color: #283136;
     text-align: left;
     padding: 0;
+    padding-left: 35px;
     margin: 0;
     margin-bottom: 29px;
 }
@@ -460,7 +460,7 @@ a {
     content: "";
     position: absolute;
     top: 50%;
-    left: -34px;
+    left: 0;
     width: 25px;
     height: 2px;
     background-color: #fb565a;
