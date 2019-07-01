@@ -558,7 +558,6 @@ sup {
     display: none;
 }
 
-
 .partners a {
     opacity: 0.2;
 }
@@ -570,6 +569,7 @@ sup {
 .partners a:active {
     opacity: 0.1;
 }
+
 
 .main-footer {
     margin: 0;
@@ -762,11 +762,11 @@ sup {
     background-image: url("../img/checkbox-on.svg");
 }
 
-input[type="radio"]:checked ~ label,
-input[type="radio"]:checked ~ label::before, 
-input[type="radio"]:checked ~ label::after,
-input[type="checkbox"]:checked ~ label,
-input[type="checkbox"]:checked ~ label::before {
+input[type="radio"]:disabled ~ label,
+input[type="checkbox"]:disabled ~ label,
+input[type="radio"]:disabled ~ label::before,
+input[type="radio"]:disabled ~ label::after,
+input[type="checkbox"]:disabled ~ label::before {
     opacity: 0.3;
 }
 
