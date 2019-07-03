@@ -5,7 +5,8 @@
     <title>Нёрдс</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap&subset=cyrillic" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style-min.css" rel="stylesheet">
+    <!--<link href="css/style.css" rel="stylesheet">-->
   </head>
   <body class="inner-page"> 
       <header class="main-header">
@@ -128,7 +129,7 @@
                 <section class="partners"> 
                     <ul class="partners-list">
                         <li class="partners-item">
-                            <a href="">
+                            <a href="https://htmlacademy.ru/intensive/htmlcss">
                                 <img src="img/logo1.png" width="199" height="68" alt="HTML Academy">
                             </a>
                         </li>
@@ -159,9 +160,10 @@
                         <p class="phone">
                             <a href="tel:+78122757575">тел. +7 (812) 275-75-75</a>
                         </p>
-                        <button class="button-send write" type="submit">
+                        <a href="feedback.html" class="button-send write">
                             Напишите нам
-                        </button>
+                        </a>
+                        <!--<button class="button-send write" type="submit">Напишите нам</button>-->
                     </div>
                 </div>
                 <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1998.6394171080221!2d30.320912360250897!3d59.938125297767805!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1559895515436!5m2!1sru!2sru" height="416" style="border:0" allowfullscreen></iframe>   
@@ -197,23 +199,23 @@
             <form action="https://echo.htmlacademy.ru" method="post">
                 <div class="feed">
                     <div class="username">
-                        <label class="item-input">
+                        <label class="item-input" for="username">
                             Ваше имя:             
                         </label>
-                        <input class="input" type="text" name="username" placeholder="Имя Фамилия" pattern="[A-Za-z]{4}">              
+                        <input class="input" type="text" name="username" placeholder="Имя Фамилия" pattern="[A-Za-z]{4}" id="username">              
                     </div>
                     <div class="appointment email">
-                        <label class="item-input email">
+                        <label class="item-input email" for="email">
                             Ваш e-mail:                    
                         </label>
-                        <input class="input" type="email" name="email" placeholder="email@example.com">             
+                        <input class="input" type="email" name="email" placeholder="email@example.com" id="email">             
                     </div>
                 </div>
                 <div class="letter">
-                    <label class="item-comment">
+                    <label class="item-comment" for="comment">
                         Текст письма:   
                     </label>
-                    <textarea class="comment" name="comment" placeholder="В свободной форме"  rows="10" cols="15"></textarea> 
+                    <textarea class="comment" name="comment" placeholder="В свободной форме"  rows="10" cols="15" id="comment"></textarea> 
                 </div>
                 <button class="button-send" type="submit">
                     Отправить
@@ -223,6 +225,7 @@
                 <span class="visually-hidden">Закрыть</span>
             </button>
         </section>
-        <script src="js/script.js"></script>
+        <script src="js/script-min.js"></script>
+        <!--<script src="js/script.js"></script>-->
     </body>
 </html>
