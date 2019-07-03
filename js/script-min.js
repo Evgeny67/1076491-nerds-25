@@ -1,0 +1,1 @@
+﻿var link=document.querySelector(".button-send"),popup=document.querySelector(".modal"),close=popup.querySelector(".modal-close");link.addEventListener("click",function(e){e.preventDefault(),popup.classList.add("modal-show")}),close.addEventListener("click",function(e){popup.classList.remove("modal-show")});
