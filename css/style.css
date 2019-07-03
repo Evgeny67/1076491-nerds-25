@@ -63,7 +63,7 @@ a {
     width: 18px;
     height: 18px;
     padding: 8px;
-    
+    vertical-align: top;
     border-radius: 50%;
     cursor: pointer;
 }
@@ -587,7 +587,7 @@ sup {
     font-weight: 700;
     text-align: left;
     line-height: 36px;
-    padding: 4px 0 12px;
+    padding: 9px 0 12px;
 }
 
 .main-footer p {
@@ -688,11 +688,18 @@ sup {
     padding: 0;
     margin: 0;
     border: none;
-    margin-bottom: 30px;
 }
 
-.filter fieldset:first-child {
+.filter .filter-item {
+    margin-bottom: 56px;
+}
+
+.filter .filter-item-radio {
     margin-bottom: 25px;
+}
+
+.filter .filter-item-checkbox {
+    margin-bottom: 30px;
 }
 
 .filter legend {
@@ -789,6 +796,7 @@ input[type="checkbox"]:disabled ~ label::before {
     background-color: #eeeeee;
     border: none;
     border-radius: 3px;
+    cursor: pointer;
 }
 
 .filter-button:hover,
@@ -1095,6 +1103,7 @@ a.button:active {
     height: 50px;
     font-size: 16px;
     font-weight: 500;
+    line-height: 18px;
     color: #ffffff;
     background-color: #fb565a;
     text-transform: uppercase;
@@ -1140,11 +1149,13 @@ a.button:active {
 
 .map {
     margin-bottom: 65px;
+    height: 416px;
+    background-color: #eeeeee;
 }
 
 .map iframe {
     width: 100%;
-    border: none;   
+    border: none; 
 }
 
 .map-contacts {
@@ -1190,9 +1201,11 @@ p.phone a {
 }
 
 .write {
-    padding: 0;
-    margin: 0;
     width: 219px;
+    height: 12px;
+    line-height: 13px;
+    display: block;
+    padding: 19px 0;
 }
 
 
@@ -1274,6 +1287,7 @@ p.phone a {
     display: inline-block;
     width: 50%;    
     font-size: 16px;
+    vertical-align: top;
     text-transform: uppercase;
 }
 
